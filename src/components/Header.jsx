@@ -12,10 +12,10 @@ export default function Header() {
         bg-[#373B53] w-full h-[72px]
 
         lg:flex-col lg:justify-between lg:items-center
-        lg:w-[103px] lg:h-screen lg:px-0 lg:rounded-br-2xl
+        lg:w-[103px] lg:h-screen lg:px-0 lg:rounded-r-3xl
       `}
     >
-      {/* logo */}
+ 
       <img
         src="./assets/logo.svg"
         alt="logo"
@@ -25,7 +25,7 @@ export default function Header() {
         `}
       />
 
-      {/* right‑hand group */}
+    
       <div
         className={`
           flex items-center space-x-6 h-full pr-4
@@ -34,7 +34,7 @@ export default function Header() {
           lg:space-x-0 lg:space-y-6
           lg:pr-0
           lg:h-auto
-          lg:w-full      /* ← make this span the entire 103px */
+          lg:w-full      
           lg:pb-4
         `}
       >
@@ -45,7 +45,6 @@ export default function Header() {
           className="h-6 w-auto cursor-pointer"
         />
 
-        {/* stick flips orientation at lg */}
         <div
           className={`
             bg-[#494E6E]

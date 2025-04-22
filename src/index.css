@@ -17,6 +17,7 @@
 
 .dark{
    --background: #0C0E16;
+   --black: var(--white)
 }
 
 
