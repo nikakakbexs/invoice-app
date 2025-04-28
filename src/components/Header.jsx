@@ -9,7 +9,7 @@ export default function Header() {
     <div
       className={`
         flex items-center justify-between
-        bg-[#373B53] w-full h-[72px]
+        bg-[#373B53] w-full h-[72px] z-40
 
         lg:flex-col lg:justify-between lg:items-center
         lg:w-[103px] lg:h-screen lg:px-0 lg:rounded-r-3xl
