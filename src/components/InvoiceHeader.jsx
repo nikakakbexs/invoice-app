@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import data from "../data";
 import Sort from "./Sort";
 import Button from "./Button";
 import InvoiceCard from "./InvoiceCard";
 import Aside from "./Aside";
 
-export default function InvoiceHeader() {
+export default function InvoiceHeader({ invoices, setInvoices }) {
   const [filter, setFilter] = useState("All");
   const [open, setOpen] = useState(false);
 
-  const filteredData = data.filter((inv) =>
+  const filteredData = invoices.filter((inv) =>
     filter === "All" ? true : inv.status.toLowerCase() === filter.toLowerCase()
   );
 
@@ -39,9 +38,7 @@ export default function InvoiceHeader() {
 
       {open && (
         <div
-          className={
-            "fixed z-10 top-[72px] bottom-0 left-0 right-0 lg:top-0 lg:bottom-0 lg:left-[103px] lg:right-0  bg-black/50  hidden md:block"
-          }
+          className="fixed z-10 top-[72px] bottom-0 left-0 right-0 lg:top-0 lg:bottom-0 lg:left-[103px] lg:right-0  bg-black/50 hidden md:block"
           onClick={() => setOpen(false)}
         />
       )}
