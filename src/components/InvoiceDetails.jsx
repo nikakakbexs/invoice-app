@@ -17,6 +17,9 @@ export default function InvoiceDetails({
 
   if (!invoice) return <p className="p-4">Invoice not found.</p>;
 
+  console.log(invoice);
+  
+
   const handleDelete = () => {
     const confirmed = window.confirm(`Delete invoice #${id}?`);
     if (confirmed) {
@@ -35,7 +38,7 @@ export default function InvoiceDetails({
   };
 
   return (
-    <div className="p-6 space-y-6 max-w-3xl mx-auto bg-[#F8F8FB] text-[#0C0E16]">
+    <div className="p-6 space-y-6 max-w-3xl mx-auto bg-[var(--white)] text-[var(--black)]">
       <button
         onClick={() => navigate("/")}
         className="text-sm text-[#7C5DFA] underline"
@@ -43,7 +46,7 @@ export default function InvoiceDetails({
         ← Go Back
       </button>
 
-      <div className="bg-white p-6 rounded-lg shadow space-y-6">
+      <div className="bg-[var(--background)] p-6 rounded-lg shadow space-y-6">
         {}
         <div className="flex justify-between items-center">
           <div
@@ -130,6 +133,7 @@ export default function InvoiceDetails({
           <div>
             <h3 className="font-semibold">Invoice Date</h3>
             <p>{invoice.createdAt}</p>
+
           </div>
           <div>
             <h3 className="font-semibold">Payment Terms</h3>
