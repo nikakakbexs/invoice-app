@@ -4,7 +4,7 @@ import Button from "./Button";
 import InvoiceCard from "./InvoiceCard";
 import Aside from "./Aside";
 
-export default function InvoiceHeader({ invoices, setInvoices }) {
+export default function InvoiceHeader({ invoices, onAddInvoice }) {
   const [filter, setFilter] = useState("All");
   const [open, setOpen] = useState(false);
 
@@ -43,7 +43,11 @@ export default function InvoiceHeader({ invoices, setInvoices }) {
         />
       )}
 
-      <Aside open={open} onClose={() => setOpen(false)} />
+      <Aside
+        open={open}
+        onClose={() => setOpen(false)}
+        onAddInvoice={onAddInvoice}
+      />
     </div>
   );
 }

@@ -57,9 +57,8 @@ export default function EditInvoice({ open, onClose, invoice, setInvoices }) {
 
   return (
     <div className="fixed inset-0 z-50 flex justify-start items-stretch pointer-events-none">
-      {/* Sidebar Panel */}
       <div
-        className={`bg-white w-full max-w-xl h-full p-6 overflow-y-auto shadow-2xl transform transition-transform duration-300 ease-in-out pointer-events-auto
+        className={`bg-[var(--white)] w-full max-w-xl h-full p-6 overflow-y-auto shadow-2xl transform transition-transform duration-300 ease-in-out pointer-events-auto
           ${open ? "translate-x-0" : "-translate-x-full"}
         `}
       >
@@ -67,7 +66,7 @@ export default function EditInvoice({ open, onClose, invoice, setInvoices }) {
           Edit Invoice #{form.id}
         </h2>
 
-        {/* Description */}
+      
         <div className="mb-4">
           <label className="block text-sm font-semibold mb-1 text-[#7E88C3]">
             Description
@@ -80,7 +79,7 @@ export default function EditInvoice({ open, onClose, invoice, setInvoices }) {
           />
         </div>
 
-        {/* Sender Address */}
+     
         <h3 className="text-sm font-semibold text-[#7E88C3] mt-6 mb-2">
           Sender Address
         </h3>
@@ -99,8 +98,6 @@ export default function EditInvoice({ open, onClose, invoice, setInvoices }) {
             />
           </div>
         ))}
-
-        {/* Client Info */}
         <h3 className="text-sm font-semibold text-[#7E88C3] mt-6 mb-2">
           Client Info
         </h3>
@@ -123,7 +120,7 @@ export default function EditInvoice({ open, onClose, invoice, setInvoices }) {
           />
         </div>
 
-        {/* Client Address */}
+   
         {["street", "city", "postCode", "country"].map((field) => (
           <div className="mb-2" key={field}>
             <label className="block text-xs mb-1 capitalize">
@@ -140,7 +137,7 @@ export default function EditInvoice({ open, onClose, invoice, setInvoices }) {
           </div>
         ))}
 
-        {/* Payment Terms */}
+
         <div className="mt-4 mb-4">
           <label className="block text-sm font-semibold mb-1 text-[#7E88C3]">
             Payment Terms
@@ -155,7 +152,7 @@ export default function EditInvoice({ open, onClose, invoice, setInvoices }) {
           />
         </div>
 
-        {/* Items */}
+
         <h3 className="text-sm font-semibold mb-2 text-[#7E88C3]">Items</h3>
         {form.items.map((item, idx) => (
           <div
@@ -188,7 +185,7 @@ export default function EditInvoice({ open, onClose, invoice, setInvoices }) {
           </div>
         ))}
 
-        {/* Buttons */}
+
         <div className="flex justify-between mt-6">
           <button
             onClick={onClose}

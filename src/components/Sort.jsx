@@ -5,7 +5,6 @@ export default function Sort({ selected, onSelect }) {
   const ref = useRef(null);
   const options = ["All", "Draft", "Pending", "Paid"];
 
-  // close dropdown on outside click
   useEffect(() => {
     const handleClick = (e) => {
       if (ref.current && !ref.current.contains(e.target)) {
@@ -22,7 +21,7 @@ export default function Sort({ selected, onSelect }) {
         onClick={() => setOpen((o) => !o)}
         className="inline-flex items-center gap-2 text-[var(--black)] font-medium"
       >
-        {/* Responsive text: short on mobile, full on larger */}
+
         <span className="sm:hidden">Filter</span>
         <span className="hidden sm:inline">Filter by status</span>
         <img

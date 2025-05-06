@@ -5,8 +5,10 @@ export default function InvoiceCard({ data }) {
   return (
     <div className="space-y-6 md:space-y-8 mt-6">
       {data.map((invoice) => (
+
+        
         <div key={invoice.id}>
-          {/* Mobile Version */}
+
           <Link to={`/invoice/${invoice.id}`}>
             <div className="bg-[var(--white)] p-6 rounded-lg flex flex-col md:hidden cursor-pointer hover:ring-1 hover:ring-[var(--purple-900)] transition">
               <div className="flex justify-between items-center">
