@@ -4,6 +4,7 @@ import Button from "./Button";
 import InvoiceCard from "./InvoiceCard";
 import Aside from "./Aside";
 
+
 export default function InvoiceHeader({ invoices, onAddInvoice }) {
   const [filter, setFilter] = useState("All");
   const [open, setOpen] = useState(false);
@@ -32,7 +33,13 @@ export default function InvoiceHeader({ invoices, onAddInvoice }) {
         </div>
 
         <div className="mt-8 lg:overflow-y-auto lg:h-[calc(100vh-165px)]">
-          <InvoiceCard data={filteredData} />
+          {filteredData.length > 0 ? (
+            <InvoiceCard data={filteredData} />
+          ) : (
+            <div className="flex justify-center items-center h-full">
+              <img src="./assets/noinvoice.png" alt="No Invoices" />
+            </div>
+          )}
         </div>
       </div>
 
